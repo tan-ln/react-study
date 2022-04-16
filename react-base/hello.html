@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react</title>
+    <script src="./assets/react.js"></script>
+    <script src="./assets/react-dom.js"></script>
+</head>
+<body>
+    <div>
+        <div id="reactContainer"></div>
+    </div>
+    
+    <script>
+        var HelloComponent = React.createClass({
+            render() {
+                return React.createElement('h1', null, 'Hello World !')
+            }
+        })
+
+        ReactDOM.render(
+            React.createElement(HelloComponent, null),
+            document.getElementById('reactContainer')
+        )
+    </script>
+</body>
+</html>
